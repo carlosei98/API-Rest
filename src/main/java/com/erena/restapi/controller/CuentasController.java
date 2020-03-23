@@ -1,4 +1,4 @@
-package controller;
+package com.erena.restapi.controller;
 
 import com.erena.restapi.entities.Cuentas;
 import com.erena.restapi.repositories.CuentasRepository;
