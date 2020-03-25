@@ -20,6 +20,12 @@ public class CuentasController {
         return repository.findAll();
     }
 
+    @CrossOrigin
+    @GetMapping("/login/{usuario}&{contraseña}")
+    Cuentas findByUsuarioAndContraseña(@PathVariable String usuario, @PathVariable String contraseña) {
+        return repository.findByUsuarioAndContraseña(usuario, contraseña);
+    }
+
 
     @PostMapping("/cuentas")
     public Cuentas newCuenta(@RequestBody Cuentas newCuenta) {

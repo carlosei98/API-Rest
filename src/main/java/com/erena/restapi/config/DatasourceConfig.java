@@ -11,10 +11,10 @@ public class DatasourceConfig {
     @Bean
     public DataSource dataSource() {
         return DataSourceBuilder.create()
-                .driverClassName("org.mariadb.jdbc.Driver")
-                .url("jdbc:mariadb://localhost:3306/proyectociclo")
+                .driverClassName("com.mysql.cj.jdbc.Driver")
+                .url("jdbc:mysql://aaz2lp6gi5zbye.cgmodfpdbwjw.us-east-1.rds.amazonaws.com/proyectociclo")
                 .username("root")
-                .password("root")
+                .password("rootroot")
                 .build();
     }
 }
