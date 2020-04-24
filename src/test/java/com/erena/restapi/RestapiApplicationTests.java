@@ -1,6 +1,6 @@
 package com.erena.restapi;
 
-import com.erena.restapi.entities.Cuentas;
+import com.erena.restapi.entities.Cuenta;
 import com.erena.restapi.repositories.CuentasRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +31,10 @@ class RestapiApplicationTests {
 
 	@Test
 	public void saveAndCheckUsers() {
-		repository.save(new Cuentas("carlos","root"));
-		List<Cuentas> cuentasList = repository.findAll();
+		repository.save(new Cuenta("carlos","root"));
+		List<Cuenta> cuentaList = repository.findAll();
 
-		assertThat(cuentasList.size()).isEqualTo(2);
+		assertThat(cuentaList.size()).isEqualTo(2);
 	}
 
 
