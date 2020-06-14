@@ -3,16 +3,13 @@ package com.erena.restapi.entities;
 import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Data
 @Entity
+@Table(name = "persona")
 public class Persona {
-
-    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) long id;
-    private String nombre;
-    private String dni;
-
+    @Id long id;
+    String nombre, apellidos, dni, calle, localidad, usuario, contraseña, rol;
 }

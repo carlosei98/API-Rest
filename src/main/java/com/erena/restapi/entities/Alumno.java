@@ -1,18 +1,23 @@
 package com.erena.restapi.entities;
 
+
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
+@Table(name = "alumno")
 public class Alumno {
+    @Id long id_persona;
+    @OneToOne @JoinColumn(name = "id_persona") Persona persona;
 
-    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) long id;
-    private long idPersona;
-    private long idCurso;
-
+    @ManyToMany @JoinTable(
+            name = "asignatura_alumno",
+            joinColumns = {@JoinColumn(name = "id_asignatura")},
+            inverseJoinColumns = {@JoinColumn(name = "id_alumno")}
+    )
+    Set<Asignatura> asignaturas = new HashSet<>();
 }

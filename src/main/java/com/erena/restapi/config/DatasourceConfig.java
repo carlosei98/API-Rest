@@ -12,9 +12,9 @@ public class DatasourceConfig {
     public DataSource dataSource() {
         return DataSourceBuilder.create()
                 .driverClassName("com.mysql.cj.jdbc.Driver")
-                .url("jdbc:mysql://aaz2lp6gi5zbye.cgmodfpdbwjw.us-east-1.rds.amazonaws.com/proyectociclo")
+                .url("jdbc:mysql://localhost:3306/proyectociclo")
                 .username("root")
-                .password("rootroot")
+                .password("root")
                 .build();
     }
 }

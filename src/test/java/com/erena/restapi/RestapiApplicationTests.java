@@ -1,7 +1,5 @@
 package com.erena.restapi;
 
-import com.erena.restapi.entities.Cuenta;
-import com.erena.restapi.repositories.CuentasRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
