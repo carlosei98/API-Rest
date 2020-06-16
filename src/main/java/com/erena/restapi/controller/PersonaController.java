@@ -9,14 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/*
-Esta clase es el controlador necesario al que se conectará el front-end del proyecto para recibir los datos relacionados
-con las personas:
-    - Recibir los datos.
-    - Crear una persona nueva en la base de datos.
-    - Borrar una persona de la base de datos.
-    - Modificar una persona en la base de datos.
- */
 
 @RestController
 @CrossOrigin
@@ -58,8 +50,7 @@ public class PersonaController {
         p.setRol(persona.getRol());
         p.setUsuario(persona.getUsuario());
 
-        Persona res = repository.save(p);
-        return res;
+        return repository.save(p);
     }
 
 

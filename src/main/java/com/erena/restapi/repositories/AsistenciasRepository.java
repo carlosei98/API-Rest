@@ -1,6 +1,5 @@
 package com.erena.restapi.repositories;
 
-import com.erena.restapi.entities.Alumno;
 import com.erena.restapi.entities.Asistencia;
 import com.erena.restapi.entities.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;

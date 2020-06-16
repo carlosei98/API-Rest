@@ -1,14 +1,12 @@
 package com.erena.restapi.controller;
 
 import com.erena.restapi.entities.Alumno;
-import com.erena.restapi.entities.Asistencia;
 import com.erena.restapi.entities.Persona;
 import com.erena.restapi.repositories.AlumnosRepository;
 import com.erena.restapi.repositories.PersonasRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.sql.Date;
 import java.util.List;
 
 @RestController
@@ -41,6 +39,4 @@ public class AlumnosController {
         }
         return personaList;
     }
-
-
 }
