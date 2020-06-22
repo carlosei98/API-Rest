@@ -1,5 +1,4 @@
 package com.erena.restapi.repositories;
-
 import com.erena.restapi.entities.Alumno;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
